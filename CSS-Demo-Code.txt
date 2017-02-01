@@ -1,0 +1,1062 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ITNT Creative Designs: CSS3 Animation Demo</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="CSS3 Animation Demonstration by Nick Saindon.">
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+
+<style type="text/css">
+
+* {
+	margin: 0;
+	padding: 0;
+}
+	
+html {
+  height: 100%;
+
+}
+
+body {
+	height: 100%;
+	margin:0;
+	padding:0;
+	line-height: 1.4em;
+	letter-spacing: 1.2px;
+}
+	
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+ 
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	margin: auto;
+	position: fixed;
+	background-color:#000000;
+	z-index: 1000;
+}
+
+.logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0 0 40px;
+	animation:3s ease 0s normal forwards 1 fadein;
+	-webkit-animation:3s ease 0s normal forwards 1 fadein;
+	-moz-animation:3s ease 0s normal forwards 1 fadein;
+	opacity:1;
+}
+
+@-webkit-keyframes fadein {
+	0%  {left: 0px; top: -200px; opacity: 0;}
+	50% {left: 0px; top: -200px; opacity: 0;}
+	100% {left: 0px; top: 0px; opacity: 1;}	
+}
+
+@-moz-keyframes fadein {
+	0%  {left: 0px; top: -200px; opacity: 0;}
+	50% {left: 0px; top: -200px; opacity: 0;}
+	100% {left: 0px; top: 0px; opacity: 1;}	
+}
+
+@keyframes fadein {
+	0%  {left: 0px; top: -200px; opacity: 0;}
+	50% {left: 0px; top: -200px; opacity: 0;}
+	100% {left: 0px; top: 0px; opacity: 1;}	
+}
+
+/* CSS3 Image Slider*/	
+.css-header {
+	width: 100%;
+	height: 760px;
+	color:  #fff;
+}
+
+.backgroundslider {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.backgroundslider li span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	animation: images 32s linear infinite;
+	-moz-animation: images 32s linear infinite;
+	-ms-animation: images 32s linear infinite;
+	-o-animation: images 32s linear infinite;
+	-webkit-animation: images 32s linear infinite;
+}
+
+.backgroundslider li:nth-child(1) span {
+	background-image: url(Images/CSS-Demo/image1.jpg);
+}
+
+.backgroundslider li:nth-child(2) span {
+	background-image: url(Images/CSS-Demo/image2.jpg);
+	animation-delay: 8s;
+	-moz-animation-delay: 8s;
+	-ms-animation-delay: 8s;
+	-o-animation-delay: 8s;
+	-webkit-animation-delay: 8s;
+}
+
+.backgroundslider li:nth-child(3) span {
+	background-image: url(Images/CSS-Demo/image3.jpg);
+	animation-delay: 16s;
+	-moz-animation-delay: 16s;
+	-ms-animation-delay: 16s;
+	-o-animation-delay: 16s;
+	-webkit-animation-delay: 16s;
+}
+	
+.backgroundslider li:nth-child(4) span {
+	background-image: url(Images/CSS-Demo/image4.jpg);
+	animation-delay: 24s;
+	-moz-animation-delay: 24s;
+	-ms-animation-delay: 24s;
+	-o-animation-delay: 24s;
+	-webkit-animation-delay: 24s;
+}
+
+/* animation for images */	
+@keyframes images {
+	0% { opacity:0; animation-timing-function: ease-in; }
+	10% { opacity:1; animation-timing-function: ease-out; }
+	25% {opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+
+@-moz-keyframes images {
+	0% { opacity:0; animation-timing-function: ease-in; }
+	10% { opacity:1; animation-timing-function: ease-out; }
+	25% {opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+
+@-ms-keyframes images {
+	0% { opacity:0; animation-timing-function: ease-in; }
+	10% { opacity:1; animation-timing-function: ease-out; }
+	25% {opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+
+@-o-keyframes images {
+	0% { opacity:0; animation-timing-function: ease-in; }
+	10% { opacity:1; animation-timing-function: ease-out; }
+	25% {opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+
+@-webkit-keyframes images {
+	0% { opacity:0; animation-timing-function: ease-in; }
+	10% { opacity:1; animation-timing-function: ease-out; }
+	25% {opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+	
+.backgroundslider li div {
+    z-index: 1000;
+    position: absolute;
+    top: 300px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+
+.backgroundslider li div h3 {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5em;
+    padding: 0;
+    line-height: 200px;
+	color: #ece9e1;
+}
+	
+.backgroundslider li:nth-child(2) div {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s;
+}
+.backgroundslider li:nth-child(3) div {
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    -o-animation-delay: 16s;
+    -ms-animation-delay: 16s;
+    animation-delay: 16s;
+}
+.backgroundslider li:nth-child(4) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+
+/* animation for text */
+@-webkit-keyframes titleAnimation { 
+	0% { opacity: 0; -webkit-transform: translateY(200px); }
+	8% { opacity: 1; -webkit-transform: translateY(0px); }
+	17% { opacity: 1; -webkit-transform: scale(1); }
+	19% { opacity: 0 }
+	25% { opacity: 0; -webkit-transform: scale(10); }
+	100% { opacity: 0 }
+}
+	
+@-moz-keyframes titleAnimation { 
+	0% { opacity: 0; -moz-transform: translateY(200px); }
+	8% { opacity: 1; -moz-transform: translateY(0px); }
+	17% { opacity: 1; -moz-transform: scale(1); }
+	19% { opacity: 0 }
+	25% { opacity: 0; -moz-transform: scale(10); }
+	100% { opacity: 0 }
+}
+	
+@-o-keyframes titleAnimation { 
+	0% { opacity: 0; -o-transform: translateY(200px); }
+	8% { opacity: 1; -o-transform: translateY(0px); }
+	17% { opacity: 1; -o-transform: scale(1); }
+	19% { opacity: 0 }
+	25% {opacity: 0; -o-transform: scale(10); }
+	100% { opacity: 0 }
+}
+	
+@-ms-keyframes titleAnimation { 
+	0% { opacity: 0; -ms-transform: translateY(200px); }
+	8% { opacity: 1; -ms-transform: translateY(0px); }
+	17% { opacity: 1; -ms-transform: scale(1); }
+	19% { opacity: 0 }
+	25% { opacity: 0; -webkit-transform: scale(10); }
+	100% { opacity: 0 }
+}
+	
+@keyframes titleAnimation { 
+	0% { opacity: 0; transform: translateY(200px); }
+	8% { opacity: 1; transform: translateY(0px); }
+	17% { opacity: 1; transform: scale(1); }
+	19% { opacity: 0 }
+	25% { opacity: 0; transform: scale(10);}
+	100% { opacity: 0 }
+}
+/* End of CSS3 Image Slider */	
+
+/* Section 1 Automatic scrolling image in iPhone */
+.sect1 {
+	width: 100%;
+	height: auto;
+	position:relative;
+	background-color: #fff;
+}
+	
+.sect1-left-col {
+	margin: 0px auto;
+	width: 50%;
+	height: 550px;
+	float: left;
+	background-color: #ece9e1;
+}
+
+.web-image {
+	width: 192px;
+	height: 342px;
+	overflow: hidden;
+	margin: 104px auto;
+	border-radius: 2px;
+	left: 3px;
+	right: 0;
+	position:absolute;
+}
+
+.phoneWrap {
+	width: 100%;
+	height: 550px;
+	position:relative;
+	background-image: url(Images/Web-Design/iphone.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: 225px auto;	
+}
+
+.webScroll {
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right:0;
+	margin: 0 auto;
+	animation:moveSlideshow 12s infinite linear;
+	-webkit-animation:moveSlideshow 12s infinite linear;
+	-moz-animation:moveSlideshow 12s infinite linear;
+}
+
+@keyframes moveSlideshow {
+	0% {left: 0; top:0; }
+	15% {left: 0; top:0; }
+	50% {left: 0; top: -550px; }
+	65% {left: 0; top: -550px; }
+	100% {left: 0; top: 0;}
+}
+
+.sect1-right-col {
+	width: 50%;
+	height: 550px;
+	float: left;
+	background-color:#232323;
+}
+
+.animPhone-text {
+	width: 425px;
+	margin: 50px auto;
+}
+
+.animPhone-text h3 {
+	font-size: 1.6em;
+	text-align: center;
+	padding-bottom: 20px;
+	color: #a4977d;
+}
+
+.animPhone-text p {
+	font-size: 1.2em;
+	color: #a4977d;
+}
+/* End of Section 1 Automatic scrolling image in iPhone */
+	
+/* Section 2 Sprite Animation Desciption */
+.sect2 {
+	width: 100%;
+	height: 390px;
+	background-color: #FFFFFF;
+}
+
+.sprite-discription {
+	width: 765px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.sprite-discription h3 {
+	text-align: center;
+	font-size: 1.6em;
+	color: #a09a90;
+	padding-bottom: 15px;
+}
+
+.sprite-discription p {
+	font-size: 1.2em;
+	color: #a09a90;
+}
+/* End of Section 2 Sprite Animation Desciption */
+	
+/* Section 3 Srpite Animation with CSS3 Key-frames */
+.sect3 {
+	width: 100%;
+	height: 500px;
+}
+
+.sect3-left-col {
+	width: 50%;
+	height: 500px;
+	float: left;
+	background-color: #232323;
+}
+
+.av-edit-wrapper {
+	width: 365px;
+	margin: 0 auto;
+	text-align: center;
+}
+	
+.robot-wrapper {
+	width: 100%;
+	margin: 90px auto;
+	text-align: center;
+}
+
+#robot-sprit {
+	background-image: url(Images/3d-Animation/robot-sprit.png);
+	background-size: 8800px 288px;
+	width: 550px;
+	height: 288px;
+	margin: 0 auto;
+	animation: robot-sprit 1s steps(16) infinite;
+}
+
+@keyframes robot-sprit {
+	from { background-position: 0px; }
+	to{ background-position: -8800px; }
+}
+
+	
+.sect3-right-col {
+	width: 50%;
+	height: 500px;
+	float: left;
+	margin: 0 auto;
+	background-color:#a4977d;
+}
+
+.walk-wrapper {
+	width: 100%;
+	margin: 90px auto;
+	text-align: center;
+}
+
+#walking-sprit {
+	background-image:url(Images/Audio-Visual/ITNT-walking1.png);
+	background-size: 4400px 300px;
+	width: 400px;
+	height: 300px;
+	margin: 0 auto;
+	animation: walking-sprit 1s steps(11) infinite;
+}
+
+@keyframes walking-sprit {
+	to { background-position: 0px; }
+	from { background-position: 4400px; }
+}
+/* End of Section 3 Srpite Animation with CSS3 Key-frames */	
+	
+/* Section 4 Parallax with CSS3 */
+.sect4 {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	padding-top: 0px;
+	background-color: #fff;
+}	
+	
+.large-window {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	margin: 0 auto 0 auto;
+	background-image: url(Images/About/macpro-ipad.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	position: relative;
+}
+
+.window-tint {
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.window-cta {
+	font-size: 28px;
+	text-decoration: none;
+	color: #FFFFFF;
+	border: 2px solid #c22026;
+	padding: 8px 10px;
+}
+/* End of Section 4 Parallax */	
+	
+/* Section 5 Hover Over Desciption */
+.sect5 {
+	width: 100%;
+	height: 550px;
+	background-color: #232323;
+}
+
+.hoverover-description {
+	width: 580px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.hoverover-description h3 {
+	text-align: center;
+	font-size: 1.6em;
+	color: #a4977d;
+	padding-bottom: 15px;
+}
+
+.hoverover-description p {
+	font-size: 1.2em;
+	color: #a4977d;
+}
+/* End of Section 2 Hover Over Desciption */	
+
+/* Section 4 Hoverover Effects*/
+.sect6 {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #232323;
+	text-align:center;
+}
+
+.webdesign-wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+figure.box1 {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 33.33%;
+  background: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.box1 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+figure.box1 img {
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: top;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transition: 3s ease-in-out;
+  -webkit-transition: 3s ease-in-out;
+  -moz-transition: 3s ease-in-out;
+}
+
+figure.box1 i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2em;
+  color: #fff;
+  width: 70%;
+  height: auto;
+  padding: 15px;
+  line-height: 40px;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}	
+
+figure.box1 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+		
+figure.box2 {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 33.33%;
+  background: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.box2 * {
+	margin-top: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+figure.box2 img {
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: top;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transition: 3s ease-in-out;
+  -webkit-transition: 3s ease-in-out;
+  -moz-transition: 3s ease-in-out;
+}
+
+figure.box2 i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 2em;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  line-height: 500px;
+  text-align: center;
+  display: table;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+	
+figure.box2 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+	
+figure.box3 {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 33.33%;
+  background: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.box3 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+figure.box3 img {
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: top;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transition: 3s ease-in-out;
+  -webkit-transition: 3s ease-in-out;
+  -moz-transition: 3s ease-in-out;
+}
+
+figure.box3 i {
+  position: absolute;
+  top: 45%;
+  left: 100%;
+  font-size: 2em;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  line-height: 40px;
+  text-align: center;
+  display: table;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}	
+
+figure.box3 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+	
+.slideTextUp { 
+  top: 100%;
+}
+	
+figure.box1.blue {
+  background-color: #2472a4;
+}
+
+figure.box1.blue i {
+  color: #fff;
+}
+
+figure.box2.red {
+  background-color: #ab3326;
+}
+
+figure.box2.red i {
+  color: #fff;
+}
+
+figure.box3.yellow {
+  background-color: #a4977d;
+}
+
+figure.box3.yellow i {
+  color: #fff;
+}
+
+figure.box1:hover img,
+figure.box1.hover img {
+  opacity: 0.3;
+  transform: scale(1.6) rotate(30deg);
+  -webkit-transform: scale(1.6) rotate(30deg);
+  -moz-transform: scale(1.6) rotate(30deg);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  
+}
+
+figure.box1:hover i,
+figure.box1.hover i {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+	
+figure.box2:hover img,
+figure.box2.hover img {
+  opacity: 0.3;
+  transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+figure.box2:hover i,
+figure.box2.hover i {
+-webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+
+figure.box3:hover img,
+figure.box3.hover img {
+  opacity: 0.3;
+  transform: skewX(20deg);
+  -webkit-transform: skewX(20deg);
+  -moz-transform: skewX(20deg);
+  -webkit-filter: skewX(20deg);
+  filter: grayscale(100%);
+}
+
+figure.box3:hover i,
+figure.box3.hover i {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+	
+/* Section 7 3D Cube Desciption */
+.sect7 {
+	width: 100%;
+	height: 600px;
+	background-color: #ece9e1;
+}
+
+.cube-description {
+	width: 580px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.cube-description h3 {
+	text-align: center;
+	font-size: 1.6em;
+	color: #a09a90;
+	padding-bottom: 15px;
+}
+
+.cube-description p {
+	font-size: 1.2em;
+	color: #a09a90;
+}
+/* End of Section 7 3D Cube Desciption */		
+	
+/* Section 8 3D Cube Animation */
+.sect8 {
+	width: 100%;
+	height: 500px;
+	background-color: #fff;
+}	
+	
+.cube-wrap {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	padding-top: 100px;
+	perspective: 500px;
+	-webkit-perspective: 500px;
+}
+	
+.cube {
+	transform-style: preserve-3d;
+	animation: cube-rotate 10s infinite linear;
+	-webkit-transform-style: preserve-3d;
+	-webkit-animation: cube-rotate 10s infinite linear;
+}
+
+@keyframes cube-rotate {
+	0% {transform: rotateY(0deg);}
+	100% {transform: rotateY(360deg);}
+}
+
+@-webkit-keyframes cube-rotate {
+	0% {-webkit-transform: rotateY(0deg);}
+	100% {-webkit-transform: rotateY(360deg);}
+}
+	
+.cube div {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+}
+	
+.cube .cubeSide {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	opacity: 0.9;
+	background: url(Images/CSS-Demo/ITNT-Logo.jpg);
+	background-size: 100px 100px;
+	background-repeat:no-repeat;
+  	border: 1px solid #232323;
+}
+	
+.enlarge {
+	transform-style: preserve-3d;
+	animation: enlarge 10s infinite;
+	-webkit-transform-style: preserve-3d;
+	-webkit-animation: enlarge 10s infinite;
+}
+
+@keyframes enlarge {
+	0%, 100% {transform: translateZ(0px);}
+	50% {transform: translateZ(300px);}
+}
+
+@-webkit-keyframes enlarge {
+	0%, 100% {-webkit-transform: translateZ(0px);}
+	50% {-webkit-transform: translateZ(300px);}
+}
+	
+.cube .cubeSide.front {
+  transform: rotateY(0deg) translateZ(50px);
+	-webkit-transform: rotateY(0deg) translateZ(50px);
+}
+
+.cube .cubeSide.back {
+	transform: rotateY(180deg) translateZ(50px);
+	-webkit-transform: rotateY(180deg) translateZ(50px);
+}
+
+.cube .cubeSide.right {
+	transform: rotateY(90deg) translateZ(50px);
+	-webkit-transform: rotateY(90deg) translateZ(50px);
+}
+.cube .cubeSide.left {
+	transform: rotateY(-90deg) translateZ(50px);
+	-webkit-transform: rotateY(-90deg) translateZ(50px);
+}
+
+.cube .cubeSide.top {
+	transform: rotateY(90deg) rotateX(90deg) translateZ(50px);
+	-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(50px);
+}
+
+.cube .cubeSide.bottom {
+	transform: rotateY(-90deg) rotateX(270deg) translateZ(50px);
+	-webkit-transform: rotateY(-90deg) rotateX(270deg) translateZ(50px);
+	 box-shadow: 0px 0px 50px #000;
+}
+/* End of Section 8 3D Cube Animation */	
+
+</style>
+
+</head>
+<body>
+
+<header>
+<img src="Images/Landing-Page/ITNT-Logo.png" class="logo" width="85" alt=""/>
+</header>
+
+
+ <div class="css-header">
+ 	<ul class="backgroundslider">
+	    <li><span></span><div><h3>CSS3 Animation</h3></div></li>
+        <li><span></span><div><h3>Sprite Animation</h3></div></li>
+        <li><span></span><div><h3>Scrolling and Hover Effects</h3></div></li>
+    	<li><span></span><div><h3>3D Cube and Perspective</h3></div></li>
+	</ul>
+</div>
+
+<div class="sect1 clearfix">
+ <div class="iphone-wrap">
+    <div class="sect1-left-col">
+        <div class="phoneWrap">
+        	<div class="web-image"><img class="webScroll" src="Images/Web-Design/email-mockup.jpg" alt="" /></div>
+        </div>
+    </div>
+
+    <div class="sect1-right-col">
+        <div class="animPhone-text">
+            <h3>Automatic Scrolling Web Page</h3>
+            <p>1.  Create a wrapper to display the iPhone and place another div around the image 		            inside the wrapper.<br>
+	       2.  Make sure to give the image a class as well.<br>
+	       3.  Place the web page image as a background image and set the 				            position to center and the size to the size of your image.<br>
+	       4.  Set the class around the web page image to fit within the screen of 				 the iPhone, and set the overflow to hidden.<br>
+	       5.  Create an animation and timing within the actual class of the image, 				 and set the width to a 100%.<br>
+	       6.  Add key-frames for the scrolling effect and set the left to 0 and the 				            top to start at 0 and end at the desired height.<br>
+	       7.  For more details on this effect consult the provide code on github.
+            </p>
+        </div>
+    </div>
+	</div>
+</div>
+
+<!--Section 2 Sprite Description-->
+<div class="sect2">
+        <div class="sprite-discription">
+            <h3>How to Create Sprite Animation with CSS3 Key-frames</h3>
+            <p>1.  Create a wrapper (window to display the image) to nest the image inside.<br>
+	       2.  Create another div for the background image inside the wrapper.<br>
+	       3.  Add the background image within the url and set the width and height to each         	            individual frame.<br>
+	       4.  Set the background-size to the full width and height of the entire sprite 			            image.<br>
+	       5.  Create an animation by adding a name, duration, number of steps (how many 			frames there are), and set it to infinite to loop the animation.<br>
+	       6.  Be sure to set all your margins to align the sprite to the center of the window.<br>
+	       7.  Create a key-frame and set the beginning to 0px and the from to 4400px (full 		            width of the sprite).
+            </p>
+        </div>
+</div>
+<!--Section 2 Sprite Description-->
+
+<!--Section 3 Sprite Animation-->
+<div class="sect3 clearfix">
+	<div class="sect3-left-col clearfix">
+		<div class="robot-wrapper">
+				<div id="robot-sprit"></div>
+			</div>
+		
+	</div>
+	<div class="sect3-right-col">
+		<div class="av-edit-wrapper">
+			<div class="walk-wrapper">
+			<div id="walking-sprit"></div>
+		</div>
+		</div>
+	</div>
+</div>
+<!--Section 3 Sprite Animtion-->
+
+<!--Section 4 Parallax Effect-->
+<div class="sect4">
+	<div class="large-window">
+		<div class="window-tint">
+        </div>
+	</div>
+</div>
+<!--End of Section 4 Parallax Effect-->
+
+<!--Section 5 Hover Over Description-->
+<div class="sect5">
+        <div class="hoverover-description">
+            <h3>How to Create Hover-Over Effects with CSS3</h3>
+            <p>1.  Create a wrapper to contain multiple images and hover overs.<br>
+	       2.  Create a figure tag with a two classes for hover over effect and color.<br>
+	       3.  Place inside the figure the image, text, and href tag if you want to link the image 		            to another page.<br>
+	       4.  Set the figure class to a relative position and the a tag and text to an absolute 			position.<br>
+	       5.  Add a transition in both the image and text to a specified timing and to ease.<br>
+	       6.  Now Add key-frames for both image and text to transform them with scale, 			rotation, or translate for desired animtion.<br>
+	       7.  The i tag was used to indicate a technical term, and to display the text in italics. 			However, it does not have to be used because the same class can be applied in 			the h3 tag.<br>
+           	       8.  For more specific code for the HTML and CSS3 follow the code provided on 		            github.
+            </p>
+        </div>
+</div>
+<!--End of Section 5 Hover Over Description-->
+
+<!--Section 6 Hover Over Effects Demo-->
+<div class="sect6 clearfix">
+	<div class="webdesign-wrapper">
+        <figure class="box1 blue">
+            <img src="Images/CSS-Demo/hover-img1.jpg" alt="Image of Macbook Pro and iPad"/>
+            <i class="ion-search"><h3>Text 1</h3></i>
+            <a href="#"></a> 
+        </figure>
+        <figure class="box2 red">
+            <img src="Images/CSS-Demo/hover-img2.jpg" alt="Image Man on Phone"/>
+            <i class="slideTextUp"><h3>Text 2</h3></i>
+            <a href="#"></a>
+        </figure>
+        <figure class="box3 yellow">
+            <img src="Images/CSS-Demo/hover-img3.jpg" alt="Image of Macbook Pro and Bose Headphones"/>
+            <i class="ion-search"><h3>Text 3</h3></i>
+            <a href="#"></a>
+        </figure>
+	</div>
+</div>
+<!--End of Section 6 Hover Over Demo-->
+
+<!--Section 7 3D Cube Description-->
+<div class="sect7">
+        <div class="cube-description">
+            <h3>How to Create A 3D Cube and Animation</h3>
+            <p>1.  Create a wrapper and a class for the cube inside the wrapper.<br>
+	       2.  The create individual div classes for the front, back, top, bottom, left, and right of 			the cube.<br>
+	       3.  In the CSS3 use transform and apply rotateX and translateZ to create the all 			sides of the cubeSide class.<br>
+	       4.  Apply a transform property to the cube class, and use preserve 3D to preserve 			the 3D transformations.<br>
+	       5.  Once again set your timing, delay, infinite, and ease for the animation of the 			cube.<br>
+	       6.  Add key-frames to rotate the cube by starting at 0deg and ending at 360deg.<br>
+	       7.  To move to cube forward you will need to add a div class between the cub 			wrapper and the cube div.<br>
+                   8.  Add CSS3 animation to given class in step 7 with timing and ect..<br>
+                   9.  Create key-frames with transform property and apply translateZ to move forward 		and backwards.<br>
+                  10.  Be sure to inspect the code given on github for further CSS3 properties.
+            </p>
+        </div>
+</div>
+<!--Section 7 3D Cube Description-->
+
+<!--Section 8 3D Cube-->
+<div class="sect8">
+	<div class="cube-wrap">
+		<div class="enlarge">
+		<div class="cube">
+			<div class="cubeSide front"></div>
+			<div class="cubeSide back"></div>
+			<div class="cubeSide top"></div>
+			<div class="cubeSide bottom"></div>
+			<div class="cubeSide left"></div>
+			<div class="cubeSide right"></div>
+		</div>
+		</div>
+	</div>
+</div>
+<!--End of Section 8 3D Cube-->
+
+</body>
+</html>
