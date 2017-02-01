@@ -927,12 +927,12 @@ figure.box3.hover i {
     <div class="sect1-right-col">
         <div class="animPhone-text">
             <h3>Automatic Scrolling Web Page</h3>
-            <p>1.  Create a wrapper to display the iPhone and place another div around the image 		            inside the wrapper.<br>
+            <p>1.  Create a wrapper to display the iPhone and place another div around the image inside the wrapper.<br>
 	       2.  Make sure to give the image a class as well.<br>
-	       3.  Place the web page image as a background image and set the 				            position to center and the size to the size of your image.<br>
-	       4.  Set the class around the web page image to fit within the screen of 				 the iPhone, and set the overflow to hidden.<br>
-	       5.  Create an animation and timing within the actual class of the image, 				 and set the width to a 100%.<br>
-	       6.  Add key-frames for the scrolling effect and set the left to 0 and the 				            top to start at 0 and end at the desired height.<br>
+	       3.  Place the web page image as a background image and set the position to center and the size to the size of 			your image.<br>
+	       4.  Set the class around the web page image to fit within the screen of the iPhone, and set the overflow to 		      hidden.<br>
+	       5.  Create an animation and timing within the actual class of the image, and set the width to a 100%.<br>
+	       6.  Add key-frames for the scrolling effect and set the left to 0 and the top to start at 0 and end at the 		     desired height.<br>
 	       7.  For more details on this effect consult the provide code on github.
             </p>
         </div>
@@ -946,11 +946,11 @@ figure.box3.hover i {
             <h3>How to Create Sprite Animation with CSS3 Key-frames</h3>
             <p>1.  Create a wrapper (window to display the image) to nest the image inside.<br>
 	       2.  Create another div for the background image inside the wrapper.<br>
-	       3.  Add the background image within the url and set the width and height to each         	            individual frame.<br>
-	       4.  Set the background-size to the full width and height of the entire sprite 			            image.<br>
-	       5.  Create an animation by adding a name, duration, number of steps (how many 			frames there are), and set it to infinite to loop the animation.<br>
+	       3.  Add the background image within the url and set the width and height to each         	   			   individual frame.<br>
+	       4.  Set the background-size to the full width and height of the entire sprite 			         		    image.<br>
+	       5.  Create an animation by adding a name, duration, number of steps (how many frames there are), and set it 		      to infinite to loop the animation.<br>
 	       6.  Be sure to set all your margins to align the sprite to the center of the window.<br>
-	       7.  Create a key-frame and set the beginning to 0px and the from to 4400px (full 		            width of the sprite).
+	       7.  Create a key-frame and set the beginning to 0px and the from to 4400px (full 		         		    width of the sprite).
             </p>
         </div>
 </div>
@@ -989,12 +989,12 @@ figure.box3.hover i {
             <h3>How to Create Hover-Over Effects with CSS3</h3>
             <p>1.  Create a wrapper to contain multiple images and hover overs.<br>
 	       2.  Create a figure tag with a two classes for hover over effect and color.<br>
-	       3.  Place inside the figure the image, text, and href tag if you want to link the image 		            to another page.<br>
-	       4.  Set the figure class to a relative position and the a tag and text to an absolute 			position.<br>
+	       3.  Place inside the figure the image, text, and href tag if you want to link the image to another page.<br>
+	       4.  Set the figure class to a relative position and the a tag and text to an absolute position.<br>
 	       5.  Add a transition in both the image and text to a specified timing and to ease.<br>
-	       6.  Now Add key-frames for both image and text to transform them with scale, 			rotation, or translate for desired animtion.<br>
-	       7.  The i tag was used to indicate a technical term, and to display the text in italics. 			However, it does not have to be used because the same class can be applied in 			the h3 tag.<br>
-           	       8.  For more specific code for the HTML and CSS3 follow the code provided on 		            github.
+	       6.  Now Add key-frames for both image and text to transform them with scale, rotation, or translate for 			   desired animtion.<br>
+	       7.  The i tag was used to indicate a technical term, and to display the text in italics.  However, it does 		     not have to be used because the same class can be applied in the h3 tag.<br>
+               8.  For more specific code for the HTML and CSS3 follow the code provided on github.
             </p>
         </div>
 </div>
@@ -1027,15 +1027,15 @@ figure.box3.hover i {
         <div class="cube-description">
             <h3>How to Create A 3D Cube and Animation</h3>
             <p>1.  Create a wrapper and a class for the cube inside the wrapper.<br>
-	       2.  The create individual div classes for the front, back, top, bottom, left, and right of 			the cube.<br>
-	       3.  In the CSS3 use transform and apply rotateX and translateZ to create the all 			sides of the cubeSide class.<br>
-	       4.  Apply a transform property to the cube class, and use preserve 3D to preserve 			the 3D transformations.<br>
-	       5.  Once again set your timing, delay, infinite, and ease for the animation of the 			cube.<br>
+	       2.  The create individual div classes for the front, back, top, bottom, left, and right of the cube.<br>
+	       3.  In the CSS3 use transform and apply rotateX and translateZ to create the all sides of the cubeSide 			   class.<br>
+	       4.  Apply a transform property to the cube class, and use preserve 3D to preserve the 3D transformations.<br>
+	       5.  Once again set your timing, delay, infinite, and ease for the animation of the cube.<br>
 	       6.  Add key-frames to rotate the cube by starting at 0deg and ending at 360deg.<br>
-	       7.  To move to cube forward you will need to add a div class between the cub 			wrapper and the cube div.<br>
-                   8.  Add CSS3 animation to given class in step 7 with timing and ect..<br>
-                   9.  Create key-frames with transform property and apply translateZ to move forward 		and backwards.<br>
-                  10.  Be sure to inspect the code given on github for further CSS3 properties.
+	       7.  To move to cube forward you will need to add a div class between the cube wrapper and the cube div.<br>
+               8.  Add CSS3 animation to given class in step 7 with timing and ect..<br>
+               9.  Create key-frames with transform property and apply translateZ to move forward and backwards.<br>
+               10.  Be sure to inspect the code given on github for further CSS3 properties.
             </p>
         </div>
 </div>
