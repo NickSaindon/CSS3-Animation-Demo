@@ -1,0 +1,1 @@
+This is a demonstration of CSS3 Animation using key-frames, and other coding techniques.  Checkout the image slider with animated text, automatic scrolling web page, sprite animation, parallax, hover over effects, and animated 3D cube.
